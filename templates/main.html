@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Propero HR Task Automation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            position: absolute;
+            top: 40px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .form-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Propero HR Task Automation</h1>
+
+    <div class="form-container">
+        <select id="letterType">
+            <option value="internship_letter.html">Internship Letter</option>
+            <option value="appointment_letter.html">Appointment Letter</option>
+            <option value="experience_letter.html">Experience Letter</option>
+        </select>
+        <button onclick="redirectToPage()">Submit</button>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            const selectedPage = document.getElementById("letterType").value;
+            window.location.href = selectedPage;
+        }
+    </script>
+
+</body>
+</html>
